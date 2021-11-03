@@ -96,6 +96,7 @@ while True:
                 elif isStarted:
                     mistakes += 1
                     if mistakes == 10:
+                        corners = [0, 0, 0, 0]
                         canvas = np.zeros((480, 640, 3), np.uint8) # remove green lines
                         finishX, finishY = 0, 0
                         prevX, prevY = 0, 0
