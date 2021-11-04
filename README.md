@@ -1,12 +1,12 @@
 # Squid-Game-Cookies-Cutter
 A python game to play the Squid game cookies cutter using computer vision
 
-# Req
+# Requirements
 
-pip install opencv-python
+`pip install opencv-python`
 
-pip install mediapipe
+`pip install mediapipe`
 
-pip install cvzone
+`pip install cvzone`
 
-pip install numpy
+`pip install numpy`
