@@ -33,8 +33,6 @@ corners = [0, 0, 0, 0]
 # mistakes
 mistakes = 0
 
-isFlaged = False
-
 
 while True:
     _, img = cap.read()
@@ -101,7 +99,6 @@ while True:
                         finishX, finishY = 0, 0
                         prevX, prevY = 0, 0
                         c = 0
-                        isFlaged = False
                         mistakes = 0
                         gameOver = True
                 circle(img, (smoothX, smoothY), 5, (255, 255, 0), FILLED)
