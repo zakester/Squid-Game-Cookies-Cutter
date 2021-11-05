@@ -11,7 +11,7 @@ sqr_img = imread("img/sqr (2).png", IMREAD_UNCHANGED)
 sqr_img = resize(sqr_img, (270, 230), interpolation=INTER_AREA)
 
 sqrW, sqrH = 318, 318
-pox, poy = int(sqrW / 2), 60
+pox, poy = int(sqrW / 2), 60 # position of your image/sqr_img
 b, g, r = 27, 74, 114
 
 
@@ -41,8 +41,10 @@ while True:
 
 
     h, w, _= sqr_img.shape
-    # img = rectangle(img, (0, 0),
-    #                 (640, 480), (255, 255, 255), FILLED)
+    
+    # White Background
+    # img = rectangle(img, (0, 0), (640, 480), (255, 255, 255), FILLED)
+
     img = overlayPNG(img, sqr_img, [pox, poy])
 
     if hands:
@@ -66,11 +68,12 @@ while True:
                             finishX, finishY = cursor[0], cursor[1]
 
                         
-                        line(canvas, (prevX, prevY), (smoothX, smoothY), (255, 255, 0), thickness=9)
+                        line(canvas, (prevX, prevY), (smoothX, smoothY), (255, 255, 0), thickness=9) # Draw Line if he is inside
 
                         if (smoothX-10 <= finishX <= smoothX+10 and smoothY-10 <= finishY <= smoothY+10):
                             if corners == [1, 1, 1, 1]:
-                                print("Finished!!!")
+                                print("Finished!!!") # WIN
+
 
                 elif cb == 26 and cg == g and cr == r:
                     corners[0] = 1
@@ -91,7 +94,7 @@ while True:
 
 
 
-                elif isStarted:
+                elif isStarted: # LOSE
                     mistakes += 1
                     if mistakes == 10:
                         corners = [0, 0, 0, 0]
