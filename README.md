@@ -3,10 +3,10 @@ A python game to play the Squid game cookies cutter using computer vision
 
 # Requirements
 
-`pip install opencv-python`
+`pip install opencv-python==4.5.3.56`
 
-`pip install mediapipe`
+`pip install mediapipe==0.8.7.3`
 
-`pip install cvzone`
+`pip install cvzone==1.5.2`
 
-`pip install numpy`
+`pip install numpy==1.19.5`
